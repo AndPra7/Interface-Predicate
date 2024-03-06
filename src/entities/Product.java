@@ -26,8 +26,14 @@ public class Product {
 		this.price = price;
 	}
 	
+	// método estático trabalha com o produto que passar como argumento para ele
 	public static boolean staticProductPredicate(Product p) {
 		return p.getPrice() >= 100.0;
+	}
+	
+	// é um método da instancia, vai trabalhar com o próprio objeto onde está
+	public boolean noStaticProductPredicate() {
+		return price >= 100.0;
 	}
 
 	@Override
